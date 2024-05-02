@@ -1,0 +1,54 @@
+/* estilos del mensaje */
+.messages{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    height: 60px;
+    background: rgb(235, 21, 21);
+    color: white;
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+    border-radius: 8px;
+    border: 2px solid rgb(212, 44, 44);
+    animation: animar-mensaje .5s 1 ease-out;
+}
+
+@media (max-width: 400px) {
+    .messages{
+        width: 200px;
+        height: 50px;
+        right: 30px;
+    }
+}
+
+@keyframes animar-mensaje {
+    0%{
+        transform: scale(1);
+        transition: .3s ease-out;
+    }
+    50%{
+        transform: scale(1.1);
+        transition: .3s ease-out;
+    }
+    100%{
+        transform: scale(1);
+        transition: .3s ease-out;
+    }
+}
+
+.messages p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    color: white;
+}
+
+.messages i{
+    font-size: 25px;
+    margin-right: 10px;
+}

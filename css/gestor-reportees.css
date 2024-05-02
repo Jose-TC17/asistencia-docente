@@ -1,0 +1,687 @@
+.body-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-out;
+}
+
+.body-container.activo{
+    width: calc(100% - 250px);
+    transform: translateX(250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-out;
+}
+
+@media (max-width: 800px){
+    .body-container{
+        width: 100%;
+    }
+    .body-container.activo{
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h1{
+    width: 100%;
+    font-family: var(--fuente-open-sans);
+    font-size: 20px;
+    color: var(--color-gris-oscuro);
+    font-weight: 500;
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media (min-width:400px){
+    h1{
+        font-size: 25px;
+    }
+}
+@media (min-width: 900px){
+    h1{
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+hr{
+    
+    text-align: center;
+    width: 95%;
+    height: 2px;
+    color: var(--color-gris-claro);
+}
+
+/* estilo de los botones */
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin: 10px 0;
+    width: 100%;
+    height: auto;
+}
+
+/* primeros dos botones */
+
+.buttons .download{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+
+@media (min-width: 500px){
+    .buttons .download{
+        flex-direction: row;
+        height: auto;
+        margin: 5px 0;
+    }
+}
+
+.buttons i{
+    margin-right: 10px;
+}
+
+/* btn PDF */
+
+.download .PDF{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: rgb(226, 40, 40);
+    width: 200px;
+    height: 45px;
+    font-family: var(--fuente-open-sans);
+    font-size: 18px;
+    color: var(--color-blanco);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: .3s ease-out;
+}
+
+.download .PDF:hover{
+    background: rgb(255, 21, 21);
+    transition: .3s ease-out;
+}
+
+/* EXEL */
+
+.download .EXEL{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: rgb(20, 128, 35);
+    width: 200px;
+    height: 45px;
+    font-family: var(--fuente-open-sans);
+    font-size: 18px;
+    color: var(--color-blanco);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: .3s ease-out;
+}
+
+.download .EXEL:hover{
+    background: rgb(33, 160, 50);
+    transition: .3s ease-out;
+}
+
+@media (min-width: 500px){
+    .download .PDF, .download .EXEL{
+        margin: 0 5px;
+    }
+}
+
+/* ultimos dos botones */
+
+.buttons .insert-report{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+
+@media (min-width: 500px){
+    .buttons .insert-report{
+        flex-direction: row;
+        height: auto;
+        margin: 5px 0;
+    }
+}
+
+/* dos botones */
+
+.insert-report a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: rgb(48, 49, 48);
+    width: 200px;
+    height: 45px;
+    font-family: var(--fuente-open-sans);
+    font-size: 18px;
+    color: var(--color-blanco);
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 10px; 
+    transition: .3s ease-out;
+}
+
+.insert-report button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: rgb(48, 49, 48);
+    width: 200px;
+    height: 45px;
+    font-family: var(--fuente-open-sans);
+    font-size: 18px;
+    color: var(--color-blanco);
+    font-weight: 500;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-bottom: 10px; 
+    transition: .3s ease-out;
+}
+
+
+.insert-report a:hover{
+    background: rgb(80, 82, 80);
+    color: var(--bs-white);
+    transition: .3s ease-out;
+}
+.insert-report button:hover{
+    background: rgb(80, 82, 80);
+    transition: .3s ease-out;
+    color: var(--bs-white);
+}
+
+@media (min-width: 500px){
+    .insert-report a{
+        margin: 0 5px;
+    }
+    .insert-report button{
+        margin: 0 5px;
+    }
+}
+
+/* estilos de los graficos */
+
+.statistics{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* configuraciones de media */
+@media (min-width: 600px){
+    .statistics{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.average-attendance{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    box-shadow: 0 0 8px var(--color-gris-claro);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: .3s ease-out;
+}
+
+.average-attendance:hover{
+    box-shadow: 0 0 15px var(--color-gris-claro);
+    transition: .3s ease-out;
+}   
+
+/* estilo del titulo */
+.average-attendance h3{
+    font-family: var(--fuente-open-sans);
+    font-size: 18px;
+    color: var(--color-gris-oscuro);
+}
+
+.average-attendance .circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--fuente-open-sans);
+    color: var(--color-gris-oscuro);
+    font-size: 18px;
+    font-weight: 600;
+    animation: circle-animate .9s infinite ease-out;
+    margin: 10px 0;
+}
+
+@keyframes circle-animate {
+    0%{
+        box-shadow: 0 0 15px rgb(78, 81, 85);
+    }
+    50%{
+        box-shadow: 0 0 15px rgb(158, 163, 170);
+
+    }
+    100%{
+        box-shadow: 0 0 15px rgb(78, 81, 85);
+    }
+}
+
+@media (min-width:400px){
+    .average-attendance{
+        width: 350px;
+    }
+}
+
+@media (min-width:500px){
+    .average-attendance{
+        width: 450px;
+    }
+}
+
+/* configuraciones de media */
+@media (min-width: 600px){
+    .average-attendance{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (min-width: 800px){
+    .average-attendance{
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media (min-width: 900px){
+    .average-attendance{
+        width: 350px;
+        height: 350px;
+        margin: 10px 0 20px 0;
+    }
+    .average-attendance .circle{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* estilo de grafico pie */
+
+.graphics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    box-shadow: 0 0 8px var(--color-gris-claro);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: .3s ease-out;
+}
+
+.graphics:hover{
+    box-shadow: 0 0 15px var(--color-gris-claro);
+    transition: .3s ease-out;
+}   
+
+.graphics-pie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 300px;
+}
+
+@media (min-width:400px){
+    .graphics{
+        width: 350px;
+    }
+}
+
+@media (min-width:500px){
+    .graphics{
+        width: 450px;
+    }
+}
+
+@media (min-width:600px){
+    .graphics{
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (min-width:800px){
+    .graphics{
+        width: 300px;
+        height: 250px;
+    }
+}
+
+@media (min-width:900px){
+    .graphics{
+        width: 350px;
+        height: 350px;
+        margin: 10px 0 20px 0;
+    }
+    .graphics-pie{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* estilos de grafico line */
+
+.graphics-big{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.graphics-line{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    box-shadow: 0 0 8px var(--color-gris-claro);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: .3s ease-out;
+}
+
+.graphics-line:hover{
+    box-shadow: 0 0 15px var(--color-gris-claro);
+    transition: .3s ease-out;
+}   
+
+@media (min-width:400px){
+    .graphics-line{
+        width: 350px;
+    }
+}
+
+@media (min-width:500px){
+    .graphics-line{
+        width: 450px;
+    }
+    .graphics-line .line{
+        margin: 0 20px;
+    }
+}
+
+@media (min-width:600px){
+    .graphics-line{
+        width: 550px;
+    }
+    .graphics-line .line{
+        margin: 0 20px;
+    }
+}
+
+@media (min-width:800px){
+    .graphics-line{
+        width: 665px;
+    }
+    .graphics-line .line{
+        margin: 0 20px;
+    }
+}
+
+@media (min-width:850px){
+    .graphics-line{
+        width: 700px;
+    }
+    .graphics-line .line{
+        margin: 0 20px;
+    }
+}
+
+@media (min-width:900px){
+    .graphics-line{
+        width: 800px;
+        margin: 10px 0 20px 0;
+    }
+    .graphics-line .line{
+        margin: 0 20px;
+    }
+}
+
+@media (min-width:1100px){
+    .graphics-line{
+        width: 900px;
+    }
+    .graphics-line .line{
+        margin: 0 20px;
+    }
+}
+
+.graphics-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    box-shadow: 0 0 8px var(--color-gris-claro);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: .3s ease-out;
+}
+
+.graphics-bar:hover{
+    box-shadow: 0 0 15px var(--color-gris-claro);
+    transition: .3s ease-out;
+}   
+
+@media (min-width:400px){
+    .graphics-bar{
+        width: 350px;
+    }
+}
+
+@media (min-width:500px){
+    .graphics-bar{
+        width: 450px;
+    }
+    .graphics-bar .bar{
+        margin: 0 20px;
+    }
+
+}
+
+@media (min-width:600px){
+    .graphics-bar{
+        width: 550px;
+    }
+    .graphics-bar .bar{
+        margin: 0 20px;
+    }
+    
+}
+
+@media (min-width:800px){
+    .graphics-bar{
+        width: 665px;
+    }
+    .graphics-bar .bar{
+        margin: 0 20px;
+    }
+}
+
+@media (min-width:850px){
+    .graphics-bar{
+        width: 700px;
+    }
+    .graphics-bar .bar{
+        margin: 0 20px;
+    }
+}
+
+@media (min-width:900px){
+    .graphics-bar{
+        width: 800px;
+    }
+    .graphics-bar .bar{
+        width: 90%;
+        margin: 0 20px;
+    }
+}
+
+@media (min-width:1100px){
+    .graphics-bar{
+        width: 900px;
+    }
+    .graphics-bar .bar{
+        margin: 0 20px;
+    }
+}
+
+.container-forms{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.301);
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container-forms.active{
+    display: flex;
+}
+
+.container-forms form{
+    width: 90%;
+    padding: 10px;
+    border-radius: 10px;
+    background: #fff;
+
+}
+
+@media (min-width: 500px) {
+    .container-forms form{
+        width: 500px;
+    }
+}
+
+.container-forms form .x{
+    transform: translateX(90%);
+    font-size: 25px;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+
+.container-forms form h3{
+    text-align: center;
+    font-family: "Open sans", sans-serif;
+}
+
+.container-forms form .x #x-button{
+    transform: rotate(0deg);
+    transition: .3s ease-out;
+}
+
+.container-forms form .x #x-button:hover{
+    transform: rotate(180deg);
+    transition: .3s ease-out;
+    color: var(--bs-red);
+}
+
+.messages{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    height: 60px;
+    background: rgb(235, 21, 21);
+    color: white;
+    position: fixed;
+    font-family: "Open Sans", sans-serif;
+    bottom: 25px;
+    right: 20px;
+    border-radius: 8px;
+    border: 2px solid rgb(212, 44, 44);
+    animation: animar-mensaje .5s 1 ease-out;
+}
+
+@media (max-width: 400px) {
+    .messages{
+        width: 200px;
+        height: 50px;
+        right: 30px;
+    }
+}
+
+@keyframes animar-mensaje {
+    0%{
+        transform: scale(1);
+        transition: .3s ease-out;
+    }
+    50%{
+        transform: scale(1.1);
+        transition: .3s ease-out;
+    }
+    100%{
+        transform: scale(1);
+        transition: .3s ease-out;
+    }
+}
+
+.messages p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.messages i{
+    font-size: 25px;
+    margin-right: 10px;
+}

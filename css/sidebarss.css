@@ -1,0 +1,176 @@
+.sidebar{
+    width: 250px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: var(--color-blanco);
+    height: 100vh;
+    transform: translateX(-255px);
+    border: 1px solid var(--color-gris-claro);
+    box-shadow: 0 0 4px #8d8c8c;
+    transition: .3s ease-out;
+    overflow-y: hidden;
+    z-index: 2000;
+}
+
+.sidebar.activo{
+    transform: translateX(0);
+    transition: .3s ease-out;
+}
+
+/* estilo del logo */
+.sidebar .sidebar-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 40px;
+}
+
+.sidebar .sidebar-header .logo{
+    width: 50px;
+    margin: 5px 10px 5px 10px;
+}
+
+/* titulo */
+.sidebar .sidebar-header .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.sidebar .sidebar-header .title .university-name{
+    font-family: var(--fuente-open-sans);
+    color: var(--color-gris-oscuro);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.sidebar .sidebar-header .title .teacher{
+    font-family: var(--fuente-open-sans);
+    color: var(--color-gris-oscuro);
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/* estilos de las filas  */
+
+.list-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 800px;
+}
+
+.list-nav .title-general{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    font-family: var(--fuente-open-sans);
+    color: var(--color-gris-oscuro);
+    font-weight: 600;
+    background: var(--color-blanco-transparente);
+    width: 230px;
+    height: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px var(--color-gris-oscuro-transparente);
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+
+.list-nav .title-general.activo{
+    background: var(--color-gris-oscuro-transparente-sidebar);
+    transition: .3s ease-out;
+    border-radius: 8px 8px 0 0;
+}
+
+.list-nav .title-general:hover{
+    background: var(--color-gris-oscuro-transparente-sidebar);
+    transition: .3s ease-out;
+}
+/*  */
+
+.list-nav .general img{
+    width: 25px;
+    margin: 0 10px;
+}
+
+.list-nav .general:hover img{
+    filter: brightness(0) saturate(100%) invert(13%) sepia(2%) saturate(0%) hue-rotate(183deg) brightness(92%) contrast(95%);
+}
+
+/*  */
+
+.list-nav .general label{
+    box-shadow: 0 0 0 var(--color-blanco);
+}
+
+.list-nav .general:hover label{
+    box-shadow: 0 0 0 var(--color-blanco);
+    color: var(--color-gris-oscuro  );
+}
+
+.list-nav .general .angle{
+    width: 20px;
+    margin: 0 10px;
+    position: absolute;
+    transition: .3s ease-out;
+    right: 10px;
+}
+
+.list-nav .general .angle.activo{
+    width: 20px;
+    margin: 0 10px;
+    position: absolute;
+    transform: rotate(180deg);
+    transition: .3s ease-out;
+    right: 10px;
+}
+
+/*  */
+
+.list-nav .container-general{
+    display: none;
+}
+
+.list-nav .container-general.activo{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    background: var(--color-blanco-oscuro);
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+.list-nav .container-general .list-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 40px;
+    background: var(--color-blanco-transparente);
+    box-shadow: 0 0 4px var(--color-gris-claro);
+    font-size: 16px;
+    font-family: var(--fuente-open-sans);
+    font-weight: 600;
+    color: var(--color-gris-oscuro);
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+.list-nav .container-general .list-content:hover{
+    background: var(--color-azulino);
+    color: var(--color-blanco);
+    transition: .3s ease-in-out;
+}

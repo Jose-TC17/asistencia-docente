@@ -1,0 +1,143 @@
+.body-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-out;
+}
+
+.body-container.activo {
+    width: calc(100% - 250px);
+    transform: translateX(250px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease-out;
+}
+
+@media (max-width: 800px) {
+    .body-container {
+        width: 100%;
+    }
+
+    .body-container.activo {
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+/* styles.css */
+
+.title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+h1 {
+    font-family: var(--fuente-open-sans);
+    font-size: 30px;
+
+}
+
+hr {
+    width: 95%;
+    margin: 20px 0;
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.container label{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+button {
+    width: 150px;
+}
+
+@media (max-width: 576px) {
+    form {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+.messages{
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 250px;
+    height: 60px;
+    background: rgb(235, 21, 21);
+    color: white;
+    position: fixed;
+    font-family: "Open Sans", sans-serif;
+    bottom: 25px;
+    right: 20px;
+    border-radius: 8px;
+    border: 2px solid rgb(212, 44, 44);
+    animation: animar-mensaje .5s 1 ease-out;
+}
+
+@media (max-width: 400px) {
+    .messages{
+        width: 200px;
+        height: 50px;
+        right: 30px;
+    }
+}
+
+@keyframes animar-mensaje {
+    0%{
+        transform: scale(1);
+        transition: .3s ease-out;
+    }
+    50%{
+        transform: scale(1.1);
+        transition: .3s ease-out;
+    }
+    100%{
+        transform: scale(1);
+        transition: .3s ease-out;
+    }
+}
+
+.messages p{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+
+.messages i{
+    font-size: 25px;
+    margin-right: 10px;
+}

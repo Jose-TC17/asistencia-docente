@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.login-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(46, 45, 45, 0.432);
+}
+
+h1{
+    color: rgb(31, 30, 30);
+    font-family: "Open sans", sans-serif;
+}
+
+a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: .3s ease-out;
+}
+
+
+a:hover{
+    background: #1486d1;
+    transition: .3s ease-out;
+}

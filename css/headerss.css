@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f9fa;
+    width: 100%;
+  }
+
+:root{
+    /* colores */
+    --color-header: #222425;
+    --color-gris-oscuro: #242424;
+    --color-gris-claro: #979797;
+    --color-gris-oscuro-transparente: rgb(155, 155, 155);
+    --color-gris-oscuro-transparente-sidebar: rgb(214, 214, 214);
+    --color-blanco: #ffffff;
+    --color-blanco-transparente: #ffffff77;
+    --color-rojoClaro: #a13535;
+    --color-azulino: #224FB1;
+    --color-azul-transparente: #1d52c5a2;
+    --color-azul-sidebar: #2e4f96d5;
+    --color-azul: #235fe0;
+    --color-blanco-oscuro: #dadada;
+    /* fuentes */
+    --fuente-open-sans: "Open Sans", sans-serif;
+}
+
+/* deselencionando las imagenes */
+img::selection{
+    display: none;
+}
+
+/* estilos del body */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: start;
+    width: 100%;
+}
+
+/* estilo cabezera */
+
+.header{
+    display: flex;
+    width: 100%;
+    height: 80px;
+    top: 0;
+    right: 0;
+    position: sticky;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    background: var(--color-header);
+    box-shadow: 0 0 4px var(--color-gris-claro);
+    transition: .3s ease-out;
+    z-index: 1000;
+}
+
+.header.activo{
+    width: calc(100% - 250px);
+    transform: translateX(250px);
+    transition: .3s ease-out;
+}
+
+@media (max-width: 800px){
+    .header{
+        width: 100%;
+    }
+    .header.activo{
+        width: 100%;
+        transform: translateX(0);
+    }
+}
+
+/* estilos del menu */
+
+.header .menu-line{
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.header .line-span-one{
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: var(--color-blanco);
+}
+
+.header .line-span-two{
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: var(--color-blanco);
+    margin: 5px 0;
+}
+
+.header .line-span-three{
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: var(--color-blanco);
+}
+
+/*  */
+
+.header label{
+    font-family: var(--fuente-open-sans);
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-blanco);
+}
+
+.header label{
+    font-size: 20px;
+}
+
+
+/*  */
+
+.header img{
+    width: 6px;
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7489%) hue-rotate(183deg) brightness(106%) contrast(104%);
+}
+
+/* estilo de ajustes */
+
+.header .settings{
+    position: absolute;
+    right: 20px;
+}
+
+/*  */
+
+/* estilo del contenido de los ajustes */
+.settings-container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 80px;
+    background: var(--color-blanco-oscuro);
+    box-shadow: 0 0 4px #929292;
+    border-radius: 10px;
+    position: absolute;
+    right: 20px;
+    top: 65px;
+    animation: settings-animate-close .1s 1 ease-out;
+}
+
+@keyframes settings-animate-close {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(.2);
+    }
+}
+
+
+.settings-container.activo{
+    display: flex;
+    animation: settings-animate .1s 1 ease-out;
+}
+
+@keyframes settings-animate {
+    0%{
+        transform: scale(.2);
+    }
+    50%{
+        transform: scale(.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.settings-container a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 30px;
+    margin: 5px 0;
+    box-shadow: 0 0 4px #929292;
+    background: var(--color-blanco-transparente);
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--fuente-open-sans);
+    font-size: 15px;
+    color: var(--color-gris-oscuro);
+    transition: .5s ease-out;
+}
+
+.settings-container a:hover{
+    background: var(--color-azul);
+    color: var(--color-blanco);
+    transition: .5s ease-out;
+}
